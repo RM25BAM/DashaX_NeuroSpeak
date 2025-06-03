@@ -1,0 +1,84 @@
+{
+  "@type": "Dataset",
+  "identifier": "10.1038/s41597-022-01147-2",
+  "title": "Metadata record for: Thinking out loud: an open-access EEG-based BCI dataset for inner speech recognition",
+  "relatedPublications": [],
+  "repositories": [
+    {
+      "name": "OpenNeuro",
+      "value": "https://doi.org/10.18112/openneuro.ds003626.v2.0.0",
+      "@type": "DataCatalog"
+    }
+  ],
+  "assays": [
+    {
+      "measurementType": {
+        "annotationValue": "brain activity",
+        "@type": "PropertyValue"
+      },
+      "technologyType": {
+        "annotationValue": "electroencephalography",
+        "termAccession": "http://purl.obolibrary.org/obo/ERO_0001337",
+        "termSource": "ERO",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    },
+    {
+      "measurementType": {
+        "annotationValue": "inner speech command",
+        "@type": "PropertyValue"
+      },
+      "technologyType": {
+        "annotationValue": "electroencephalography",
+        "termAccession": "http://purl.obolibrary.org/obo/ERO_0001337",
+        "termSource": "ERO",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    }
+  ],
+  "factors": [],
+  "studyCharacteristics": {
+    "organism": [
+      {
+        "annotationValue": "Homo sapiens",
+        "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+        "termSource": "NCBITAXON",
+        "@type": "PropertyValue"
+      }
+    ],
+    "environmentType": [],
+    "geographicalLocation": [],
+    "@type": "variableMeasured"
+  },
+  "ontologySourceReferences": {
+    "ERO": {
+      "name": "ERO",
+      "description": "Eagle-I Research Resource Ontology",
+      "file": "http://data.bioontology.org/ontologies/ERO",
+      "version": "2013-08-02",
+      "@type": "DefinedTermSet"
+    },
+    "NCBITAXON": {
+      "name": "NCBITAXON",
+      "description": "National Center for Biotechnology Information (NCBI) Organismal Classification",
+      "file": "http://data.bioontology.org/ontologies/NCBITAXON",
+      "version": "2019AB",
+      "@type": "DefinedTermSet"
+    },
+    "@type": "CategoryCodeSet"
+  },
+  "comments": [
+    {
+      "name": "Created With Configuration",
+      "value": "1.0",
+      "@type": "SoftwareApplication"
+    },
+    {
+      "name": "Data Descriptor License",
+      "value": "CC-BY-4.0",
+      "@type": "CreativeWork"
+    }
+  ]
+}
