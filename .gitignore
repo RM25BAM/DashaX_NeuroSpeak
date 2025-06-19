@@ -1,3 +1,4 @@
 .env
 .DS_Store
 docs/research_papers/.DS_Store
+venv/
