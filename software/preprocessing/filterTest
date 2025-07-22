@@ -1,0 +1,23 @@
+import mne
+import os 
+import numpy as np
+import matplotlib.pyplot as plt
+from mne.io import read_raw_edf
+from mne.preprocessing import ICA, create_eog_epochs
+
+DATASET_CHAR = 'C:/Users/Johnn/Documents/Research/DashaX_NeuroSpeak/software/data_cleaning/Imagined_speech_EEG_edf/Char/name0_A.edf'
+raw = read_raw_edf(DATASET_CHAR, preload=True)
+raw.plot(scalings='auto')
+
+start = 0
+stop = 40
+raw.pick_types(meg=False, eeg=True, eog=False, ecg=False, emg=False, ref_meg=False)
+raw.set_eeg_reference(projection=True)
+filteredData = raw.filter(l_freq=start, h_freq=stop)
+
+icaData = ICA(n_components=14, method='fastica', max_iter=10000000, random_state=42).fit(filteredData)
+icaData.exclude = [0]
+raw_clean = icaData.apply(filteredData.copy())
+raw_clean.plot()
+
+plt.savefig(str(start) + "to" + str(stop) + "fast.png")
